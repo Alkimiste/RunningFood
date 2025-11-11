@@ -1,52 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RunningFood</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>🏃‍♂️ RunningFood</h1>
+    <h1>RunningFood</h1>
     <nav>
-      <button id="menu-toggle">☰</button>
-      <ul id="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Recettes</a></li>
-        <li><a href="#">Conseils</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <a href="#" id="all">Toutes les recettes</a>
+      <a href="#" id="breakfast">Petits déj</a>
+      <a href="#" id="meals">Repas</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Énergie & fraîcheur pour vos runs</h2>
-      <p>Découvrez des recettes simples, naturelles et équilibrées.</p>
-    </section>
-
-    <section class="cards">
-      <div class="card" onclick="openPopup('Smoothie protéiné', 'Un smoothie ultra-frais pour bien démarrer la journée.')">
-        <img src="images/smoothie.jpg" alt="Smoothie">
-        <h3>Smoothie protéiné</h3>
-      </div>
-      <div class="card" onclick="openPopup('Salade post-run', 'Riche en protéines et minéraux pour bien récupérer.')">
-        <img src="images/salad.jpg" alt="Salade">
-        <h3>Salade post-run</h3>
-      </div>
-      <div class="card" onclick="openPopup('Encas d\'avant-course', 'Léger mais énergétique pour booster vos performances.')">
-        <img src="images/run1.jpg" alt="Encas">
-        <h3>Encas avant-course</h3>
-      </div>
-    </section>
+  <main id="recipe-container">
+    <!-- Les cartes de recettes seront injectées ici -->
   </main>
 
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <h2 id="popup-title"></h2>
-      <p id="popup-text"></p>
+  <!-- Modale -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <img id="modalImage" src="" alt="Recette">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
     </div>
   </div>
 
